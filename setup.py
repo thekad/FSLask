@@ -11,7 +11,7 @@ readme = os.path.join(os.path.dirname(sys.argv[0]), 'README.rst')
 
 # Definir nuestro paquete para distribuir
 setup(
-    name='FSLask',  # nuestro nombre
+    name=fslask.__name__,  # nuestro nombre
     packages=[
         'fslask',   # solo tenemos 1 paquete por el momento
     ],
@@ -25,4 +25,9 @@ setup(
     author_email='kad@blegh.net',  # email del autor
     license='MIT',  # licencia
     long_description=open(readme).read(),
+    entry_points={
+        'console_scripts': [
+            'fslask-server=fslask.server:main',
+        ],
+    },
 )

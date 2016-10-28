@@ -84,3 +84,11 @@ lugar de que nuestro código se copie, se crean *soft links*, lo cual permite qu
 cambios guardados cuando estamos editando sean reflejados sin tener que instalar
 de nuevo (con algunas restricciones)
 
+
+Nuestro primer punto de entrada
+===============================
+
+Hasta ahora tenemos todo lo necesario para iniciar, pero aun no hemos empezado.
+Comencemos por hacer nuestro *"hello world"* en un nuevo módulo dentro de nuestro
+árbol de código, digamos, ``src/fslask/server.py``
+
