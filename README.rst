@@ -45,3 +45,24 @@ En el archivo de setup vamos a usar la versión que declaramos en nuestro archiv
 ``__init__.py`` y también vamos a modificar nuestro ``requirements.txt`` para
 tomar ventaja de ``virtualenv`` y ``develop mode``
 
+
+Crear nuestro virtualenv
+========================
+
+Previamente instalamos ``virtualenvwrapper``, vamos a crear un ambiente virtual
+donde enjaular nuestro ambiente de desarrollo::
+
+    mkvirtualenv fslask
+
+o si ya lo habias creado antes::
+
+    workon fslask
+
+.. NOTE::
+   Estos *helpers* estarán disponibles solamente si seguiste previamente::
+
+       source `which virtualenvwrapper.sh`
+
+   Para asegurarse que esto suceda siempre, agrega esta directive a tu archivo
+   ``~/.bashrc``
+
