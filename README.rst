@@ -34,3 +34,14 @@ Dentro de este directorio es donde vamos también a crear nuestro árbol de cód
 de nuestra aplicación. Vamos a iniciar este árbol con un simple ``__init__.py``
 donde vamos a declarar la versión simple de nuestra aplicación.
 
+
+Crear tu setup.py
+=================
+
+El archivo ``setup.py`` es el estándar de empaquetado de python. La documentación
+de setuptools está en https://setuptools.readthedocs.io/en/latest/
+
+En el archivo de setup vamos a usar la versión que declaramos en nuestro archivo
+``__init__.py`` y también vamos a modificar nuestro ``requirements.txt`` para
+tomar ventaja de ``virtualenv`` y ``develop mode``
+
