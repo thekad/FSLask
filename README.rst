@@ -92,3 +92,6 @@ Hasta ahora tenemos todo lo necesario para iniciar, pero aun no hemos empezado.
 Comencemos por hacer nuestro *"hello world"* en un nuevo módulo dentro de nuestro
 árbol de código, digamos, ``src/fslask/server.py``
 
+Este programa va a ser declarado como un punto de entrada de consola en nuestro
+``setup.py`` y de esa manera podremos ejecutar este script directamente
+
