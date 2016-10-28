@@ -1,5 +1,8 @@
+# cualificar nuestras dependencias
 --index-url https://pypi.python.org/simple/
 
+# listar nuestras dependencias (y versiones)
 Flask==0.11.1
 
+# entrar en develop mode, para esto necesitamos setup.py
 -e .

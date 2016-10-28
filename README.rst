@@ -66,3 +66,21 @@ o si ya lo habias creado antes::
    Para asegurarse que esto suceda siempre, agrega esta directive a tu archivo
    ``~/.bashrc``
 
+Una vez creado el ``virtualenv``, hay que instalar nuestro paquete local en
+*develop mode*, esto se consigue gracias a todo lo que ya hemos hecho hasta el
+momento:
+
+1. *virtuaelnv*
+2. ``requirements.txt``
+3. ``setup.py``
+4. nuestro código
+
+Ejecutemos entonces::
+
+    pip install -r requirements.txt
+
+El término *develop mode* se refiere a que dentro de nuestro *virtualenv* en
+lugar de que nuestro código se copie, se crean *soft links*, lo cual permite que
+cambios guardados cuando estamos editando sean reflejados sin tener que instalar
+de nuevo (con algunas restricciones)
+
