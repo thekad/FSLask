@@ -95,3 +95,21 @@ Comencemos por hacer nuestro *"hello world"* en un nuevo módulo dentro de nuest
 Este programa va a ser declarado como un punto de entrada de consola en nuestro
 ``setup.py`` y de esa manera podremos ejecutar este script directamente
 
+
+Usar una base de datos
+======================
+
+Usaremos paquetes extra: Flask-SQLAlchemy por ahora. Hay que agregarla a nuestro
+archivo de requerimientos e instalar de nuevo::
+
+    pip install -r requirements.txt
+
+Una vez instalados hay que configurar nuestra app de Flask, la extensión usa
+variables globales para configurarse ``SQLALCHEMY_DATABASE_URI`` que por ahora
+va a apuntar a un DB SQLite.
+
+Después hay que crear nuestros objetos que estarán guardados en la base de datos,
+usaremos 2 clases muy simples: Preguntas y Respuestas.
+
+Después de esto hay que crear la base de datos, vamos a agregar una nueva ruta
+que va a crear la DB
