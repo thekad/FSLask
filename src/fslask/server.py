@@ -48,9 +48,13 @@ def root():
 
 @app.route('/crear')
 def crear_db():
+
     if not os.path.exists(DATABASE_FILE):
         db.create_all()
-    return DATABASE_FILE
+        msg = 'creado'
+    else:
+        msg = 'ya existe'
+    return 'Archivo de DB {0} {1}'.format(DATABASE_FILE, msg)
 
 
 def main():
