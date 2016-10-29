@@ -3,6 +3,14 @@ Pasos para instalar
 *******************
 
 
+Referencias
+===========
+
+* Dive into python http://www.diveintopython.net
+* REST API Tutorial http://www.restapitutorial.com
+* Flask Mega Tutorial https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+
+
 Instalar virtualenvwrapper
 ==========================
 
