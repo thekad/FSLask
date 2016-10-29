@@ -4,6 +4,10 @@ import os
 import sys
 
 from flask import Flask
+from flask import request
+from flask import Response
+from flask import url_for
+from flask.json import jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 # importar variables desde el __init__.py local
@@ -55,6 +59,40 @@ def crear_db():
     else:
         msg = 'ya existe'
     return 'Archivo de DB {0} {1}'.format(DATABASE_FILE, msg)
+
+
+@app.route('/preguntas', methods=['GET'])
+def listar_preguntas():
+    ps = []
+    for p in Pregunta.query.all():
+        ps.append({
+            'id': p.id,
+            'texto': p.texto,
+            'timestamp': p.timestamp,
+        })
+    return jsonify(ps)
+
+
+@app.route('/preguntas/<pid>')
+def mostrar_pregunta(pid):
+    p = Pregunta.query.get(pid)
+    r = {}
+    if p:
+        r['id'] = p.id
+        r['texto'] = p.texto
+        r['timestamp'] = p.timestamp
+    return jsonify(r)
+
+
+@app.route('/preguntas', methods=['POST'])
+def crear_pregunta():
+    texto = request.form['texto']
+    p = Pregunta(texto=texto)
+    db.session.add(p)
+    db.session.commit()
+    resp = Response(status=201)
+    resp.headers['Location'] = url_for('mostrar_pregunta', pid=p.id)
+    return resp
 
 
 def main():

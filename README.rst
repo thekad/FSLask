@@ -113,3 +113,10 @@ usaremos 2 clases muy simples: Preguntas y Respuestas.
 
 Después de esto hay que crear la base de datos, vamos a agregar una nueva ruta
 que va a crear la DB
+
+
+Pseudo-módulo de preguntas
+==========================
+
+Vamos a crear un par de métodos para manejar las preguntas, básicamente listar,
+crear, actualizar.
